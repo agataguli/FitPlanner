@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FitPlanner</string>
+    <string name="logoDark">Logo Dark [img]</string>
+    <string name="createdByAgataK">Created by Agata K</string>
+    <string name="buttonImage">button image</string>
+    <string name="name">Imię</string>
+    <string name="settings">Ustawienia</string>
+    <string name="scores">wyniki</string>
+    <string name="logoLight">logo light picture</string>
+    <string name="splash_screen_waiting_message">Trwa pobieranie danych użytkownika</string>
+    <string name="birthDate">Data urodzenia</string>
+    <string name="weight">waga</string>
+    <string name="height">wzrost</string>
+    <string name="save">zapisz</string>
+    <string name="app_info">Informacje o aplikacji</string>
+    <string name="changeDate">zmień datę</string>
+    <string name="date">data</string>
+    <string name="birthDateValidationNull">Birthdate is required field</string>
+    <string name="userFragmentErrorValidationMessage">Dane nie są prawidłowe. Popraw a następnie spóbuj ponownie.</string>
+    <string name="nameValidationError">Imię musi zaczynać się od wielkiej litery oraz zawierać od 3 do 15 znaków.</string>
+    <string name="birthDateValidationError">Data urodzenia musi być większa od 1900-01-01 oraz mniejsza niż dzisiejsza.</string>
+    <string name="heightValidationError">Wzrost musi być liczbą całkowitą większą od 0.</string>
+    <string name="weightValidationError">Waga musi być liczbą całkowitą większą od 0.</string>
+    <string name="hello">Cześć!</string>
+    <string name="profile">Profil</string>
+    <string name="history">Historia</string>
+    <string name="train">Trenuj</string>
+    <string name="sport">Dyscypliny</string>
+</resources>

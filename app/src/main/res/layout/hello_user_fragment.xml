@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hello_user_fragment_grid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="3"
+    android:columnCount="2">
+
+    <Button android:id="@+id/profile_button_r"
+        android:text="@string/profile"
+        android:background="@color/pea"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:textSize="14dip"/>
+
+    <Button android:id="@+id/scores_button_r"
+        android:text="@string/scores"
+        android:background="@color/cyan"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:textSize="14dip"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"/>
+
+    <Button android:id="@+id/settings_button_r"
+        android:text="@string/settings"
+        android:background="@color/peach"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:textSize="14dip"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"/>
+
+    <Button android:id="@+id/history_button_r"
+        android:text="@string/history"
+        android:background="@color/lilac"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:textSize="14dip"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"/>
+
+    <Button android:id="@+id/train_button_r"
+        android:text="@string/train"
+        android:background="@color/banana"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:textSize="14dip"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"/>
+
+    <Button android:id="@+id/sport_button_r"
+        android:text="@string/sport"
+        android:background="@color/lime"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:textSize="14dip"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"/>
+</GridLayout>

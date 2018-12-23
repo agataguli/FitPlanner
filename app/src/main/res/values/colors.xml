@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navyBlue">#05027a</color>
+    <color name="creamyWhite">#FFFFF0</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- hello menu buttons color /-->
+    <color name="pea">#CADC79</color>
+    <color name="banana">#F9E04B</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="lilac">#DD9ECD</color>
+    <color name="lime">#93F600</color>
+    <color name="peach">#FFCC99</color>
+
+
+    <color name="colorPrimary">@color/navyBlue</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+</resources>
