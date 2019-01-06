@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentTransaction
 import com.who.helathy.fitplanner.R
 import com.who.helathy.fitplanner.activity.fragment.HelloUserFragment
-import com.who.helathy.fitplanner.activity.fragment.NewUserFragment
+import com.who.helathy.fitplanner.activity.fragment.UserFragment
 import com.who.helathy.fitplanner.helper.util.SharedPreferencesUtil
 import com.who.helathy.fitplanner.helper.util.StaticKeyValues
 
@@ -27,7 +27,7 @@ class MenuActivity : AppCompatActivity() {
         if(this.isUserCreated!!) {
             fragmentToSet = HelloUserFragment()
         } else {
-            fragmentToSet = NewUserFragment()
+            fragmentToSet = UserFragment()
         }
 
         val fragmentT: FragmentTransaction = supportFragmentManager.beginTransaction()

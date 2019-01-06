@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewNotificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingTop="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/commonMargin"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/addNewActivityNotification"
+            android:textSize="@dimen/commonFontSize" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="32dp"
+            android:gravity="left"
+            android:text="@string/labelTrainingSport" />
+
+        <Spinner
+            android:id="@+id/spinner_sport_choose_r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="32dp"
+            android:gravity="left"
+            android:text="@string/labelTrainingTime" />
+
+        <TimePicker
+            android:id="@+id/input_time_choose_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="32dp"
+            android:gravity="left"
+            android:text="@string/labelTrainingDate" />
+
+        <CalendarView
+            android:id="@+id/input_date_choose_r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Save Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_training_notification_save_r"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginBottom="@dimen/commonMargin"
+            android:padding="@dimen/halfMargin"
+            android:text="@string/save"/>
+    </LinearLayout>
+</ScrollView>

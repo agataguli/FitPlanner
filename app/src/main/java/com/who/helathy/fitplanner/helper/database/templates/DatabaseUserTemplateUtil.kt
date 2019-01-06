@@ -2,11 +2,8 @@ package com.who.helathy.fitplanner.helper.database.templates
 
 import android.content.ContentValues
 import android.database.Cursor
-import android.os.Build
 import com.who.helathy.fitplanner.domain.User
 import com.who.helathy.fitplanner.helper.util.DateUtil
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 class DatabaseUserTemplateUtil {
     companion object {
@@ -34,7 +31,7 @@ class DatabaseUserTemplateUtil {
         }
 
         fun getUserContentValues(user: User): ContentValues {
-            var values = ContentValues()
+            val values = ContentValues()
             values.put(KEY_NAME, user.name)
             values.put(KEY_BIRTHDATE, DateUtil.dateToString(user.birthDate!!))
             values.put(KEY_HEIGHT, user.height)
@@ -44,13 +41,17 @@ class DatabaseUserTemplateUtil {
         }
 
         fun getUserFromCursor(cursor: Cursor): User {
-            var user = User()
+            val user = User()
             user.name = cursor.getString(cursor.getColumnIndex(KEY_NAME))
             user.birthDate = DateUtil.stringToDate(cursor.getString(cursor.getColumnIndex(KEY_BIRTHDATE)))
             user.height = cursor.getInt(cursor.getColumnIndex(KEY_HEIGHT))
             user.weight = cursor.getInt(cursor.getColumnIndex(KEY_WEIGHT))
 
             return user
+        }
+
+        fun getWhereClause(): String {
+            return "$KEY_NAME=?"
         }
     }
 }

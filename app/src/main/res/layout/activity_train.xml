@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.TrainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingTop="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/commonMargin"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/startTraining"
+            android:textSize="@dimen/commonFontSize" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="32dp"
+            android:gravity="left"
+            android:text="@string/labelTrainingSport" />
+
+        <Spinner
+            android:id="@+id/spinner_train_sport_choose_r"
+            android:layout_marginEnd="@dimen/commonMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/sport_train_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginEnd="@dimen/commonMargin" />
+
+        <Chronometer
+            android:id="@+id/chronometer_training"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/commonMargin"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/commonMargin"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/bigFontSize"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/label_date_start_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/timeStartHint"
+                android:autofillHints="name"
+                android:focusable="false"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/label_burned_kcals_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="0"
+                android:hint="@string/burnedKcalTileLong"
+                android:autofillHints="name"
+                android:focusable="false"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Start Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_start"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginBottom="@dimen/commonMargin"
+            android:padding="@dimen/halfMargin"
+            android:text="@string/start"/>
+
+        <!-- Pause Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_pause"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginBottom="@dimen/commonMargin"
+            android:padding="@dimen/halfMargin"
+            android:text="@string/pause"/>
+
+        <!-- Save Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_save_workout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginBottom="@dimen/commonMargin"
+            android:padding="@dimen/halfMargin"
+            android:text="@string/save"/>
+
+        <!-- Cancel Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_cancel_workout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginBottom="@dimen/commonMargin"
+            android:padding="@dimen/halfMargin"
+            android:text="@string/cancel"/>
+
+    </LinearLayout>
+</ScrollView>

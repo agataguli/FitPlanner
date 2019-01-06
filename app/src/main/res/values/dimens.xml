@@ -2,6 +2,8 @@
 <resources>
     <dimen name="commonMargin">8dp</dimen>
     <dimen name="halfMargin">4dp</dimen>
+    <dimen name="smallMargin">2dp</dimen>
 
     <dimen name="commonFontSize">16sp</dimen>
+    <dimen name="bigFontSize">32sp</dimen>
 </resources>

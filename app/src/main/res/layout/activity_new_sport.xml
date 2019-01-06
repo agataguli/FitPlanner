@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/commonMargin"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin">
+
+        <!-- Sport name -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/input_sport_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/sportName"
+                android:autofillHints="name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Sport kcal -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/input_sport_kcal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/kcalTileLong"
+                android:autofillHints="name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Sport picture url -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/input_sport_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEmailAddress"
+                android:hint="@string/sportUrlHint"
+                android:autofillHints="name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Save Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_save_sport"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginBottom="@dimen/commonMargin"
+            android:padding="@dimen/halfMargin"
+            android:text="@string/save"/>
+
+    </LinearLayout>
+</ScrollView>

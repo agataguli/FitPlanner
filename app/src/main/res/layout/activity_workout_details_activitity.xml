@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/commonMargin"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/input_workout_sport_name_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/sport"
+                android:enabled="false"
+                android:autofillHints="name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/input_workout_kcals_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/burnedKcalTileLong"
+                android:enabled="false"
+                android:autofillHints="name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/input_workout_start_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/workoutStartTile"
+                android:enabled="false"
+                android:autofillHints="name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/halfMargin"
+            android:layout_marginBottom="@dimen/halfMargin">
+            <EditText android:id="@+id/input_workout_stop_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/workoutStopTile"
+                android:enabled="false"
+                android:autofillHints="name" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

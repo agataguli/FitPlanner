@@ -1,6 +1,7 @@
 package com.who.helathy.fitplanner.helper.database.templates
 
 import android.content.ContentValues
+import android.database.Cursor
 import com.who.helathy.fitplanner.domain.Sport
 
 class DatabaseSportTemplateUtil {
@@ -23,13 +24,27 @@ class DatabaseSportTemplateUtil {
             return "DROP TABLE IF EXISTS $TABLE_NAME"
         }
 
+        fun getDeleteRowWhereClause(): String {
+            return "$KEY_ID=?"
+        }
+
         fun getSportContentValues(sport: Sport): ContentValues {
-            var values = ContentValues()
+            val values = ContentValues()
             values.put(KEY_NAME, sport.name)
             values.put(KEY_PICTURE_URL, sport.pictureUrl)
             values.put(KEY_LOST_KCAL_PER_H, sport.lostKcalPerH)
 
             return values
+        }
+
+        fun getSportFromCursor(cursor: Cursor): Sport {
+            val sport = Sport()
+            sport.name = cursor.getString(cursor.getColumnIndex(KEY_NAME))
+            sport.lostKcalPerH = cursor.getInt(cursor.getColumnIndex(KEY_LOST_KCAL_PER_H))
+            sport.pictureUrl = cursor.getString(cursor.getColumnIndex(KEY_PICTURE_URL))
+            sport.id = cursor.getInt(cursor.getColumnIndex(KEY_ID))
+
+            return sport
         }
     }
 }

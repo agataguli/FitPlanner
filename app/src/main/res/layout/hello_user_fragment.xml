@@ -33,8 +33,8 @@
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"/>
 
-    <Button android:id="@+id/history_button_r"
-        android:text="@string/history"
+    <Button android:id="@+id/my_trainings_button_r"
+        android:text="@string/my_trainings"
         android:background="@color/lilac"
         android:layout_row="1"
         android:layout_column="1"

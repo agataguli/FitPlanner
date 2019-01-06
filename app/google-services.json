@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "198909608037",
+    "firebase_url": "https://fitplanner-65132.firebaseio.com",
+    "project_id": "fitplanner-65132",
+    "storage_bucket": "fitplanner-65132.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198909608037:android:0e958670eba1d081",
+        "android_client_info": {
+          "package_name": "com.who.helathy.fitplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198909608037-f8a54slm2dsp74o9ep4l0j3hfh99qu80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0OiMe9MgyflNos1vIeDqormDmaDbnjK8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

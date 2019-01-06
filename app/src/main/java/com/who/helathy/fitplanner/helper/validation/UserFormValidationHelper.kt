@@ -4,19 +4,25 @@ import android.content.Context
 import android.widget.EditText
 import com.who.helathy.fitplanner.R
 import com.who.helathy.fitplanner.helper.util.DateUtil
+import com.who.helathy.fitplanner.helper.validation.ValidationUtil.Companion.isPositiveInt
+import com.who.helathy.fitplanner.helper.validation.ValidationUtil.Companion.isShortDateFormatted
+import com.who.helathy.fitplanner.helper.validation.ValidationUtil.Companion.isValidName
 import java.lang.Exception
 import java.util.Date
 import java.util.logging.Logger
-import java.util.regex.Pattern
 
 class UserFormValidationHelper(context: Context) {
     private val LOGGER = Logger.getLogger(UserFormValidationHelper::class.java.name)
     private val helperContext = context
 
-    fun isFormValid(nameInput: EditText, dateInput: EditText, weightInput: EditText,
-                           heightInput: EditText): Boolean {
+    fun isUserFormValid(nameInput: EditText, dateInput: EditText, weightInput: EditText,
+                        heightInput: EditText): Boolean {
         return validateName(nameInput) and validateBirthDate(dateInput) and
                 validateHeight(heightInput) and validateWeight(weightInput)
+    }
+
+    fun isWeightFormValid(weightInput: EditText, dateInput: EditText): Boolean {
+        return validateWeight(weightInput) and validateWeightDate(dateInput)
     }
 
     private fun validateName(input: EditText): Boolean {
@@ -37,7 +43,7 @@ class UserFormValidationHelper(context: Context) {
     }
 
     private fun validateHeight(input: EditText): Boolean {
-        if(!isWeightOrHeightValid(input.text.toString())) {
+        if(!isPositiveInt(input.text.toString())) {
             input.error = helperContext.resources.getString(R.string.heightValidationError)
             return false
         }
@@ -45,18 +51,19 @@ class UserFormValidationHelper(context: Context) {
     }
 
     private fun validateWeight(input: EditText): Boolean {
-        if(!isWeightOrHeightValid(input.text.toString())) {
+        if(!isPositiveInt(input.text.toString())) {
             input.error = helperContext.resources.getString(R.string.weightValidationError)
             return false
         }
         return true
     }
 
-    // TODO: agataguli - check why Kotlin wants this isEmpty condition in a separated line
-    // It looks like even if 1st condition is false return is still checking 2nd, 3nd... etc condition boolean value
-    private fun isValidName(s: String): Boolean {
-        if(s.isEmpty()) return false
-        return Character.isUpperCase(s[0]) and (s.length > 2) and (s.length < 16)
+    private fun validateWeightDate(inputDate: EditText): Boolean {
+        if(!isShortDateFormatted(inputDate.text.toString())) {
+            inputDate.error = helperContext.resources.getString(R.string.weightDateValidationError)
+            return false
+        }
+        return true
     }
     
     private fun isValidBirthDate(dateString: String): Boolean {
@@ -72,17 +79,5 @@ class UserFormValidationHelper(context: Context) {
             false
         }
     }
-
-    private fun isWeightOrHeightValid(s: String): Boolean {
-        if(!isIntValue(s)) return false
-        return s.toInt() > 0
-    }
-
-    private fun isIntValue(s: String): Boolean {
-        val numericRegex = "[0-9]+"
-        val pattern : Pattern = Pattern.compile(numericRegex)
-        return pattern.matcher(s).matches()
-    }
-
 
 }

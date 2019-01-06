@@ -4,8 +4,7 @@ class Sport {
     var name: String? = null
     var pictureUrl: String? = null
     var lostKcalPerH: Int = 0
-
-    private var id: Int = -1
+    var id: Int = -1
 
     constructor(tName: String, tPictureUrl: String, tLostKcalPerH: Int) {
         this.name = tName
@@ -18,7 +17,9 @@ class Sport {
         this.id = tId
     }
 
-    fun getId(): Int {
-        return id
+    constructor()
+
+    constructor(tName: String) {
+        name = tName
     }
 }

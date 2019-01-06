@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sport"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingTop="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin" />
+
+    <TextView
+        android:id="@+id/tv_sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sportContent"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin" />
+
+    <TextView
+        android:id="@+id/tv_kcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kcalContent"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingTop="@dimen/commonMargin"
+        android:paddingBottom="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin" />
+</LinearLayout>

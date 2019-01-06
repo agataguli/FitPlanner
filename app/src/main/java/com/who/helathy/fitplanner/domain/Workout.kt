@@ -4,14 +4,19 @@ import java.util.Date
 
 class Workout {
     var isCompleted: Boolean = false
-    lateinit var date: Date
+    var dateStart: Date? = null
+    var dateEnd: Date? = null
     var lostKcal: Int = 0
-    lateinit var sport: Sport
+    var sport: Sport? = null
 
-    constructor(tIsCompleted: Boolean, tDate: Date, tLostKcal: Int, tSport: Sport) {
+    constructor(tIsCompleted: Boolean, tDateStart: Date, tDateEnd: Date, tLostKcal: Int, tSport: Sport) {
         this.isCompleted = tIsCompleted
-        this.date = tDate
+        this.dateStart = tDateStart
+        this.dateEnd = tDateEnd
         this.lostKcal = tLostKcal
         this.sport = tSport
+    }
+
+    constructor() {
     }
 }

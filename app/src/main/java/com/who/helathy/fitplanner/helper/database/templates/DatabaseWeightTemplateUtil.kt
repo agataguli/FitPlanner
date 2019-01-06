@@ -1,10 +1,9 @@
 package com.who.helathy.fitplanner.helper.database.templates
 
 import android.content.ContentValues
-import android.os.Build
+import android.database.Cursor
 import com.who.helathy.fitplanner.domain.Weight
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import com.who.helathy.fitplanner.helper.util.DateUtil
 
 class DatabaseWeightTemplateUtil {
     companion object {
@@ -25,19 +24,20 @@ class DatabaseWeightTemplateUtil {
         }
 
         fun getWeightContentValues(weight: Weight): ContentValues {
-            var values = ContentValues()
-            values.put(KEY_DATE, getConvertLocalDateToSimpleStringFormat(weight.date!!))
+            val values = ContentValues()
+            values.put(KEY_DATE, DateUtil.dateToString(weight.date!!))
             values.put(KEY_WEIGHT_VALUE, weight.value)
 
             return values
         }
 
-        private fun getConvertLocalDateToSimpleStringFormat(date: LocalDate): String {
-            return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                date.format(DateTimeFormatter.ISO_LOCAL_DATE)
-            } else {
-                return "${date.dayOfMonth}/${date.monthValue}/${date.year}"
-            }
+        fun getWeightFromCursor(cursor: Cursor): Weight {
+            val weight = Weight()
+            weight.value = cursor.getInt(cursor.getColumnIndex(KEY_WEIGHT_VALUE))
+            weight.date = DateUtil.stringToDate(cursor.getString(cursor.getColumnIndex(KEY_DATE)))
+
+            return weight
         }
     }
+
 }

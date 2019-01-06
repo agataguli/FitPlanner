@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_training_sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingTop="@dimen/smallMargin"
+        android:paddingRight="@dimen/commonMargin" />
+
+    <TextView
+        android:id="@+id/tv_training_kcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingTop="@dimen/smallMargin"
+        android:paddingRight="@dimen/commonMargin" />
+
+    <TextView
+        android:id="@+id/tv_training_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingTop="@dimen/smallMargin"
+        android:paddingRight="@dimen/commonMargin" />
+
+    <TextView
+        android:id="@+id/tv_training_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText"
+        android:paddingLeft="@dimen/commonMargin"
+        android:paddingBottom="@dimen/commonMargin"
+        android:paddingRight="@dimen/commonMargin" />
+</LinearLayout>

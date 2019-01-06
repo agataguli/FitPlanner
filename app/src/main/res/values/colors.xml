@@ -12,6 +12,10 @@
     <color name="lime">#93F600</color>
     <color name="peach">#FFCC99</color>
 
+    <color name="redLight">#F36D6D</color>
+    <color name="redMedium">#CD1818</color>
+    <color name="redDark">#8C1212</color>
+
 
     <color name="colorPrimary">@color/navyBlue</color>
     <color name="colorPrimaryDark">#00574B</color>

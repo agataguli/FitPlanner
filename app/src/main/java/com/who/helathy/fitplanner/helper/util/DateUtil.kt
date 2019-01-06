@@ -1,8 +1,8 @@
 package com.who.helathy.fitplanner.helper.util
 
 import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.GregorianCalendar
+import java.util.*
+import java.util.concurrent.TimeUnit
 
 class DateUtil {
     companion object {
@@ -42,6 +42,18 @@ class DateUtil {
 
         fun getDay(date: Date): Int {
             return Integer.valueOf(DAY_DATE_FORMAT.format(date));
+        }
+
+        fun getDatePlusDays(oldDate: Date, daysToAdd: Int): Date {
+            val cal = GregorianCalendar()
+            cal.time = oldDate
+            cal.add(Calendar.DATE, daysToAdd)
+
+            return cal.time
+        }
+
+        fun millisecondsToSeconds(milliseconds: Long): Long {
+            return TimeUnit.MILLISECONDS.toSeconds(milliseconds)
         }
 
     }

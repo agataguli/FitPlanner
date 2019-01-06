@@ -1,9 +1,20 @@
 package com.who.helathy.fitplanner.domain
 
-import java.time.LocalDate
+import java.util.Date
 
-class Weight {
-    //TODO: Zmień na Date to LocalDate
-    val date: LocalDate? = null
-    val value: Int = 0
+class Weight: Comparable<Weight> {
+    var date: Date? = null
+    var value: Int = 0
+
+    constructor() {
+    }
+
+    constructor(date: Date, value: Int) {
+        this.date = date
+        this.value = value
+    }
+
+    override fun compareTo(other: Weight): Int {
+       return this.date!!.compareTo(other.date)
+    }
 }

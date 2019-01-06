@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingsActivity">
+
+    <Button
+        android:id="@+id/link_app_info_r"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/commonMargin"
+        android:layout_marginEnd="@dimen/commonMargin"
+        android:text="@string/app_info"
+        android:textSize="@dimen/commonFontSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_remove_all_info_r"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/commonMargin"
+        android:layout_marginEnd="@dimen/commonMargin"
+        android:text="@string/removeAllUserData"
+        android:textSize="@dimen/commonFontSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/link_app_info_r" />
+
+    <TextView
+        android:id="@+id/copy_firebase_token"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/commonMargin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/commonMargin"
+        android:gravity="center"
+        android:text="@string/copyFirebaseToken"
+        android:textSize="@dimen/commonFontSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_remove_all_info_r" />
+
+</android.support.constraint.ConstraintLayout>

@@ -79,6 +79,16 @@
                 android:autofillHints="name" />
         </android.support.design.widget.TextInputLayout>
 
+        <!-- Update weight Button -->
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/button_update_weight_r"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/commonMargin"
+            android:layout_marginBottom="@dimen/commonMargin"
+            android:padding="@dimen/halfMargin"
+            android:text="@string/updateWeight"/>
+
         <!-- Save Button -->
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button_save_r"
@@ -89,12 +99,5 @@
             android:padding="@dimen/halfMargin"
             android:text="@string/save"/>
 
-        <TextView android:id="@+id/link_app_info_r"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/halfMargin"
-            android:text="@string/app_info"
-            android:gravity="center"
-            android:textSize="@dimen/commonFontSize"/>
     </LinearLayout>
 </ScrollView>
